@@ -1,0 +1,26 @@
+[
+  {
+    "id": "0ffa0663-b7b0-437e-a8ae-9070ddb32bf8",
+    "name": "Picture 1",
+    "path": "tach-task/src/assets/images/image1.png",
+    "position": "center"
+  },
+  {
+    "id": "d0d01a58-48c5-498f-a24b-bce463f55448",
+    "name": "Picture 2",
+    "path": "tech-task/src/assets/images/image1.png",
+    "position": "left"
+  },
+  {
+    "id": "74384675-3e8b-442e-a476-9effa90b5af8",
+    "name": "Picture 3",
+    "path": "technical-task/src/assets/images/image1.png",
+    "position": "right"
+  },
+  {
+    "id": "74384675-3e8b-442e-a476-9effa90b5af9",
+    "name": "Picture 4",
+    "path": "technical-task/src/assets/images/image1.png",
+    "position": "top"
+  }
+]
