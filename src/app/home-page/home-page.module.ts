@@ -8,6 +8,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { ImageService } from './services/image.service';
+import { PopupComponent } from './components/popup/popup.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { PopupService } from './services/popup.service';
+import { MatDividerModule } from '@angular/material/divider';
 
 const routes: Routes = [
   {
@@ -20,7 +24,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     ImageListPageComponent,
-    ImageCardComponent
+    ImageCardComponent,
+    PopupComponent
   ],
   imports: [
     CommonModule,
@@ -28,9 +33,12 @@ const routes: Routes = [
     HttpClientModule,
     MatCardModule,
     MatButtonModule,
+    MatDialogModule,
+    MatDividerModule
   ],
   providers: [
-    ImageService
+    ImageService,
+    PopupService
   ]
 })
 export class HomePageModule { }

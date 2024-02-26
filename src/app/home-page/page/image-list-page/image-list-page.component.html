@@ -1,3 +1,4 @@
+<div class="wrapper">
 <ng-container *ngFor="let image of images">
   <ng-container
     *ngTemplateOutlet="childTemplate; context: { $implicit: image }"
@@ -7,4 +8,4 @@
 <ng-template #childTemplate let-image>
   <image-card [image]="image"></image-card>
 </ng-template>
-<p>image-list-page works!</p>
+</div>

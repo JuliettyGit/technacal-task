@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IImage } from '../../../constants/interfaces/image';
+import { IImage, IImagePosition } from '../../../constants/interfaces/image';
+import { IMAGE_POSITION_MAP } from '../../../constants/position-mapper';
+import { PopupService } from '../../services/popup.service';
 
 @Component({
   selector: 'image-card',
@@ -7,10 +9,17 @@ import { IImage } from '../../../constants/interfaces/image';
   styleUrls: ['./image-card.component.scss']
 })
 export class ImageCardComponent implements OnInit {
-@Input() image!: IImage;
+  @Input() image!: IImage;
+
+  imagePosition!: IImagePosition;
+
+  constructor(private popupService: PopupService) {}
 
   ngOnInit() {
-    console.log('called')
-    console.log(11, this.image)
+    this.imagePosition = IMAGE_POSITION_MAP[this.image.position];
+  }
+
+  openDialog(image: IImage) {
+    this.popupService.openPopup(image, this.imagePosition)
   }
 }

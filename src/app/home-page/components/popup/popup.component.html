@@ -1,0 +1,11 @@
+<mat-dialog-content #popupElement id="popupElement">
+  <img #imageElement mat-card-image src="{{ data.image.path }}" alt="{{ data.image.name }}">
+</mat-dialog-content>
+
+<mat-divider></mat-divider>
+<mat-dialog-actions align="end">
+  <button mat-stroked-button (click)="zoomToFit()">Zoom to fit</button>
+  <button mat-stroked-button (click)="zoomIn()">Zoom in</button>
+  <button mat-stroked-button (click)="zoomOut()">Zoom out</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Close</button>
+</mat-dialog-actions>

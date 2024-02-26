@@ -17,7 +17,6 @@ export class ImageListPageComponent implements OnInit {
     this.imageService.getImageList()
       .subscribe(resp => {
         this.images = resp;
-        console.log(1, this.images);
       })
   }
 }
