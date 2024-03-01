@@ -53,8 +53,8 @@ export class CanvasComponent implements OnInit {
   }
 
   findOffset(canvas: any): IOffset {
-    const offsetX = (canvas.offsetWidth / 2) - this.data.imagePosition.x;
-    const offsetY = (canvas.offsetHeight / 2) - this.data.imagePosition.y;
+    const offsetX = (canvas.offsetWidth / 2) - (this.data.imagePosition.x * this.scale);
+    const offsetY = (canvas.offsetHeight / 2) - (this.data.imagePosition.y * this.scale);
 
     return {
       x: offsetX,
