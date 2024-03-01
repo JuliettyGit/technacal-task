@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { IImage, IImagePosition } from '../../../constants/interfaces/image';
 import { IMAGE_POSITION_MAP } from '../../../constants/position-mapper';
 import { PopupService } from '../../services/popup.service';
+import { CanvasComponent } from '../canvas/canvas.component';
 
 @Component({
   selector: 'image-card',
@@ -20,6 +21,6 @@ export class ImageCardComponent implements OnInit {
   }
 
   openDialog(image: IImage) {
-    this.popupService.openPopup(image, this.imagePosition)
+    this.popupService.openPopup(CanvasComponent, image, this.imagePosition)
   }
 }

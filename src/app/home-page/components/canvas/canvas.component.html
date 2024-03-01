@@ -1,0 +1,7 @@
+<canvas #canvasElement width="1000" height="600"></canvas>
+<mat-divider></mat-divider>
+<nav>
+  <button mat-stroked-button (click)="zoomIn()">Zoom in</button>
+  <button mat-stroked-button (click)="zoomOut()">Zoom out</button>
+  <button mat-button cdkFocusInitial (click)="closeCanvas()">Close</button>
+</nav>

@@ -1,12 +1,7 @@
 import { AfterViewInit, Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
-import { IImage, IImagePosition } from '../../../constants/interfaces/image';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { PopupService } from '../../services/popup.service';
-
-interface IDialogData {
-  image: IImage,
-  imagePosition: IImagePosition
-}
+import { IDialogData } from '../../../constants/interfaces/dialog-data';
 
 @Component({
   selector: 'app-popup',
